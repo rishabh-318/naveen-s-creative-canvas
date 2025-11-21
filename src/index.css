@@ -39,8 +39,8 @@ All colors MUST be HSL.
     --radius: 0.75rem;
 
     /* Custom portfolio tokens */
-    --hero-gradient-start: 210 18% 20%;
-    --hero-gradient-end: 8 85% 63%;
+    --hero-gradient-start: 210 25% 15%;
+    --hero-gradient-end: 210 20% 25%;
     
     --card-hover-shadow: 0 20px 40px -10px hsl(210 18% 20% / 0.15);
     --transition-smooth: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
