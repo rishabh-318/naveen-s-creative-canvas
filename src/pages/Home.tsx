@@ -54,7 +54,7 @@ const Home = () => {
           <div
             className="absolute inset-0"
             style={{
-              background: `linear-gradient(135deg, hsl(var(--hero-gradient-start) / 0.85), hsl(var(--hero-gradient-end) / 0.85))`,
+              background: `linear-gradient(135deg, hsl(var(--hero-gradient-start) / 0.92), hsl(var(--hero-gradient-end) / 0.92))`,
             }}
           />
         </div>
@@ -104,14 +104,14 @@ const Home = () => {
 
             {/* Text Content */}
             <div className="max-w-2xl text-center lg:text-left space-y-8 animate-fade-in">
-              <h1 className="text-5xl md:text-7xl font-bold text-white leading-tight">
-                <span className="inline-block animate-slide-up">Motion Designer</span>
+              <h1 className="text-5xl md:text-7xl font-bold leading-tight drop-shadow-2xl">
+                <span className="inline-block animate-slide-up text-white">Motion Designer</span>
                 <br />
-                <span className="inline-block text-accent animate-slide-up gradient-text bg-gradient-to-r from-accent to-white bg-clip-text" style={{ animationDelay: '0.2s' }}>
+                <span className="inline-block animate-slide-up text-accent drop-shadow-[0_0_30px_rgba(253,107,82,0.8)]" style={{ animationDelay: '0.2s' }}>
                   Visual Storyteller
                 </span>
               </h1>
-              <p className="text-xl md:text-2xl text-white/90 animate-fade-in" style={{ animationDelay: '0.4s' }}>
+              <p className="text-xl md:text-2xl text-white animate-fade-in drop-shadow-lg" style={{ animationDelay: '0.4s' }}>
                 Crafting compelling visual stories for brands that dare to stand out
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start items-center pt-6 animate-fade-in" style={{ animationDelay: '0.6s' }}>
