@@ -89,9 +89,9 @@ const Home = () => {
               <div className="absolute inset-0 bg-accent/30 rounded-full blur-3xl animate-pulse-glow" />
               <div className="relative w-72 h-72 md:w-96 md:h-96 rounded-full overflow-hidden border-4 border-accent/50 animate-scale-in shadow-2xl">
                 <img
-                  src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=800&h=800&fit=crop"
+                  src="/PP.png"
                   alt="Naveen Sundriyal"
-                  className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
+                  className="scale-110 w-full h-full object-cover transition-transform duration-700 "
                 />
                 {/* Rotating border effect */}
                 <div className="absolute inset-0 rounded-full border-4 border-transparent border-t-accent border-r-accent animate-rotate-slow" />
@@ -103,16 +103,16 @@ const Home = () => {
             </div>
 
             {/* Text Content */}
-            <div className="max-w-2xl text-center lg:text-left space-y-8 animate-fade-in">
+            <div className="max-w-4xl text-center lg:text-left space-y-8 animate-fade-in">
               <h1 className="text-5xl md:text-7xl font-bold leading-tight drop-shadow-2xl">
-                <span className="inline-block animate-slide-up text-white">Motion Designer</span>
+                <span className="inline-block animate-slide-up text-white">Social Media Strategist</span>
                 <br />
                 <span className="inline-block animate-slide-up text-accent drop-shadow-[0_0_30px_rgba(253,107,82,0.8)]" style={{ animationDelay: '0.2s' }}>
-                  Visual Storyteller
+                  Video Producer
                 </span>
               </h1>
               <p className="text-xl md:text-2xl text-white animate-fade-in drop-shadow-lg" style={{ animationDelay: '0.4s' }}>
-                Crafting compelling visual stories for brands that dare to stand out
+                Crafting high-impact digital stories through strategy, editing, and on-camera communication
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start items-center pt-6 animate-fade-in" style={{ animationDelay: '0.6s' }}>
                 <Button
@@ -136,7 +136,7 @@ const Home = () => {
         </div>
 
         {/* Scroll Indicator */}
-        <div className="absolute bottom-12 left-1/2 -translate-x-1/2 animate-bounce z-10">
+        <div className="absolute bottom-12 sm:block hidden left-1/2 -translate-x-1/2 animate-bounce z-10">
           <ArrowDown className="text-white drop-shadow-lg" size={32} />
         </div>
       </section>
@@ -149,8 +149,7 @@ const Home = () => {
               Featured Work
             </h2>
             <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-              A selection of projects that showcase my approach to visual storytelling
-              and brand communication
+              A selection of projects that showcase my approach to Video Editing
             </p>
           </div>
 
