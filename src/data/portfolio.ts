@@ -18,6 +18,7 @@ export interface Project {
   images: string[];
   heroImage: string;
   videoUrl?: string;
+  link?:string,
 }
 
 export interface PersonalInfo {
@@ -44,30 +45,34 @@ export interface Skill {
 
 export const personalInfo: PersonalInfo = {
   name: "Naveen Sundriyal",
-  title: "Motion Designer & Video Editor",
+  title: "Social Media StrategistVideo Editor",
   tagline: "Crafting compelling visual stories for brands that dare to stand out",
-  email: "naveen.sundriyal@creative.com",
-  phone: "+91 98765 43210",
-  location: "Mumbai, India",
+  email: "nsundriyal62@gmail.com",
+  phone: "+91 95579 90153",
+  location: "Delhi, India",
   bio: [
-    "I'm a motion designer and video editor with over 6 years of experience creating impactful visual narratives for global brands and innovative startups. My work bridges the gap between creative storytelling and strategic brand communication.",
-    "Specializing in brand films, explainer videos, and social media content, I combine technical precision with artistic sensibility. My approach is rooted in understanding client goals and translating them into engaging visual experiences that resonate with audiences.",
-    "When I'm not crafting motion graphics, you'll find me exploring new animation techniques, collaborating with creative teams, or seeking inspiration in the world around me."
+    "I m a video editor with strong experience in managing, editing, and optimizing content across YouTube, podcasts, and short-form social platforms. I’ve worked with multiple clients including international ones delivering polished edits that balance storytelling, clarity, and platform-specific strategy.",
+    "I specialize in talking-head videos, podcast edits, social media content, and fintech-focused visuals. Whether it’s managing an entire YouTube channel, editing Zoom interviews, or creating high-impact reels, I ensure every video aligns with the brand’s message and connects with the right audience.",
+   "Beyond editing, I enjoy exploring new tools and skills from C++ to machine learning and I often work on side projects like character chatbots and 2D games. I’m always learning, building, and improving my craft."
   ],
   socials: {
-    linkedin: "https://linkedin.com/in/naveensundriyal",
-    behance: "https://behance.net/naveensundriyal",
-    vimeo: "https://vimeo.com/naveensundriyal",
-    instagram: "https://instagram.com/naveen.creates"
+    linkedin: "https://www.linkedin.com/in/naveen-sundriyal-44a5231b8/",
+    Twitter: "https://x.com/9B9_ENGINEER",
+    Naukri: "https://www.naukri.com/mnjuser/profilel",
+    instagram: "https://www.instagram.com/9v9_engineer?igsh=dXZ3bXNrbGtnbGwy"
   }
 };
 
 export const skills: Skill[] = [
-  { name: "Motion Graphics", level: 95 },
+  { name: "Adobe Premiere Pro", level: 99 },
+  { name: "Adobe Adobe After Effects", level: 85 },
+  { name: "Adobe Creative Suit", level: 90 },
+  { name: "Adobe Photoshop", level: 80 }, 
+  { name: "Canva", level: 95 },
   { name: "Video Editing", level: 92 },
-  { name: "Visual Effects", level: 88 },
+  { name: "Visual Effects", level: 80 },
   { name: "Color Grading", level: 90 },
-  { name: "3D Animation", level: 82 },
+  { name: "3D Animation", level: 40 },
   { name: "Sound Design", level: 78 },
   { name: "Storyboarding", level: 85 },
   { name: "Brand Strategy", level: 80 }
@@ -75,49 +80,56 @@ export const skills: Skill[] = [
 
 export const tools = [
   "After Effects",
+  "Canva",
   "Premiere Pro",
   "DaVinci Resolve",
-  "Cinema 4D",
-  "Blender",
+  "Audacity",
+  "Adobe creative suit",
   "Figma",
   "Illustrator",
   "Photoshop"
 ];
 
 export const projects: Project[] = [
-  {
-    id: "tech-startup-launch",
-    title: "TechVerse Launch Campaign",
-    client: "TechVerse Inc.",
-    year: "2024",
-    category: "Brand Film",
-    role: "Lead Motion Designer & Editor",
-    tools: ["After Effects", "Cinema 4D", "Premiere Pro", "DaVinci Resolve"],
-    problem: "TechVerse, a B2B SaaS startup, needed a compelling launch video that would explain their complex AI-powered platform in an accessible way while establishing brand credibility in a crowded market.",
-    process: "We started with intensive discovery sessions to understand their platform and target audience. I developed a visual language using clean geometric shapes and fluid motion to represent AI technology. The process included storyboarding, styleframes, animation tests, and iterative refinements based on stakeholder feedback.",
-    solution: "Created a 90-second brand film featuring dynamic 3D elements, kinetic typography, and seamless transitions. The video balanced technical sophistication with emotional storytelling, showcasing the platform's capabilities through metaphorical visuals rather than literal screen recordings.",
-    outcome: "The video garnered 2.5M+ views across platforms, contributed to a 156% increase in demo requests, and was featured at TechCrunch Disrupt 2024. Client reported 40% higher engagement rates compared to previous campaign videos.",
-    testimonial: {
-      quote: "Naveen transformed our complex product into a visual story that resonates. The attention to detail and creative problem-solving exceeded our expectations.",
-      author: "Sarah Chen",
-      position: "CMO, TechVerse Inc."
-    },
-    heroImage: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=1200&q=80",
-    images: [
-      "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=800&q=80",
-      "https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=800&q=80",
-      "https://images.unsplash.com/photo-1504868584819-f8e8b4b6d7e3?w=800&q=80"
-    ]
+
+{
+  id: "video-editing-showcase",
+  title: "Jio Financial Services",
+  client: "Upsurge",
+  year: "2024",
+  category: "Short-Form Content",
+  role: "Video Editor & Content Manager",
+  tools: ["Premiere Pro", "After Effects", "Audacity", "Canva"],
+
+  problem: "Client wanted to create a clean, high-impact reel that reflects my editing style and on-screen creativeness. The goal was to make a snappy, engaging video suitable for Instagram Reels and to visually communicate my ability to manage, edit, and optimize short-form content.",
+
+  process: "I ideated the concept, got the raw data from client, and crafted the edit with attention to pacing, clarity, and social-media-friendly timing. The process involved rough cut → rhythm and beat alignment → text overlays → color correction → final polish. I focused on maintaining a personal, authentic tone while ensuring platform-optimized storytelling.",
+
+  solution: "A clean and visually sharp reel featuring smooth cuts, talking-head moments, and subtle motion graphics. The video highlights my editing approach—minimal, effective, and audience-focused—while showcasing my comfort in front of the camera.",
+
+  outcome: "The reel performed well on Instagram, receiving strong engagement and positive responses from peers and creators. It effectively represents my editing style, content management skills, and camera presence for future collaborations and clients.",
+
+  testimonial: {
+    quote: "Naveen has a very clean, professional editing style. The way he manages pacing, clarity, and on-screen delivery makes the content feel effortless and engaging. This reel reflects his ability to handle both editing and content direction with confidence.",
+    author: "Agency Co-founder",
+    position: "Content Strategist"
   },
+  heroImage: "/jio_financial_services.jpg",
+  link:"https://www.instagram.com/reel/DOlgDXMD6ls/",
+  images: [
+      "https://images.unsplash.com/photo-1511379938547-c1f69419868d?w=800&q=80",
+      "https://images.unsplash.com/photo-1493225457124-a3eb161ffa5f?w=800&q=80"
+    ]
+},
   {
-    id: "sustainable-fashion-doc",
-    title: "Threads of Change",
-    client: "EcoWear Collective",
+    id: "fintech-explainer",
+    title: "Laadla Bhaiya Yojana",
+    client: "Upsurge",
     year: "2024",
-    category: "Documentary Editing",
-    role: "Editor & Colorist",
-    tools: ["Premiere Pro", "DaVinci Resolve", "After Effects"],
-    problem: "EcoWear needed to create an impactful documentary highlighting sustainable fashion practices. The raw footage was extensive (120+ hours) and required a cohesive narrative that would engage environmentally conscious millennials.",
+    category: "Goverment Scheme",
+    role: "Video Editor",
+    tools: ["Premiere Pro", "Adobe photoshop", "After Effects"],
+    problem: "The raw footage included talking-head videos that required strong pacing, clarity, and visual consistency to retain audience attention.",
     process: "Spent three weeks organizing and reviewing footage, identifying key story arcs, and conducting additional interviews to fill narrative gaps. Developed a color grading approach that emphasized natural tones to reinforce the sustainability message. Created motion graphics for data visualization segments.",
     solution: "Edited a 28-minute documentary with a three-act structure, weaving personal stories of artisans with broader industry insights. Incorporated dynamic pacing with contemplative moments, supported by a carefully curated soundtrack and subtle visual effects.",
     outcome: "Selected for screening at 5 environmental film festivals, including winning 'Best Short Documentary' at the Green Screen Festival. Generated 850K+ organic views on YouTube and sparked a 200% increase in brand awareness for EcoWear.",
@@ -126,7 +138,9 @@ export const projects: Project[] = [
       author: "Maya Patel",
       position: "Founder, EcoWear Collective"
     },
-    heroImage: "https://images.unsplash.com/photo-1558769132-cb1aea588c87?w=1200&q=80",
+    heroImage: "/Image-990.jpg",
+    link:"https://www.instagram.com/reel/DM__TanNAFs/",
+
     images: [
       "https://images.unsplash.com/photo-1558769132-cb1aea588c87?w=800&q=80",
       "https://images.unsplash.com/photo-1490481651871-ab68de25d43d?w=800&q=80"
@@ -134,14 +148,14 @@ export const projects: Project[] = [
   },
   {
     id: "fintech-explainer",
-    title: "SimplePay Explainer Series",
-    client: "SimplePay Financial",
-    year: "2023",
+    title: "WhatsApp AI Agent",
+    client: "Kunaal Naik",
+    year: "2024",
     category: "Explainer Animation",
-    role: "Motion Designer & Animator",
-    tools: ["After Effects", "Illustrator", "Figma"],
-    problem: "SimplePay needed a series of explainer videos to educate users about complex financial products (credit cards, loans, investments) in an approachable, non-intimidating way.",
-    process: "Collaborated with the marketing team to script six videos, each under 60 seconds. Designed a friendly, character-based animation style with a consistent color palette. Created modular animation elements for efficiency across the series.",
+    role: "Video editor",
+    tools: ["After Effects", "Illustrator", "canva"],
+    problem: "The client needed a WhatsApp-based AI agent to automate customer engagement—capable of answering questions, breaking down complex information, and guiding users through processes without requiring human support."
+    ,process: "Collaborated with the marketing team to script six videos, each under 60 seconds. Designed a friendly, character-based animation style with a consistent color palette. Created modular animation elements for efficiency across the series.",
     solution: "Produced six explainer videos featuring minimalist 2D animation, clear voiceover, and strategic use of white space. Each video followed a problem-solution format with relatable scenarios and simple visual metaphors.",
     outcome: "Videos collectively reached 1.8M views, reduced customer support queries by 35%, and increased product sign-ups by 48%. The series became a cornerstone of SimplePay's onboarding experience.",
     testimonial: {
@@ -149,7 +163,8 @@ export const projects: Project[] = [
       author: "Rajesh Kumar",
       position: "VP Marketing, SimplePay Financial"
     },
-    heroImage: "https://images.unsplash.com/photo-1563986768609-322da13575f3?w=1200&q=80",
+    heroImage: "/o7adDf5tS9I-HD.jpg",
+    link:"https://www.youtube.com/watch?v=o7adDf5tS9I",
     images: [
       "https://images.unsplash.com/photo-1563986768609-322da13575f3?w=800&q=80",
       "https://images.unsplash.com/photo-1579621970563-ebec7560ff3e?w=800&q=80"
@@ -157,29 +172,30 @@ export const projects: Project[] = [
   },
   {
     id: "music-video-indie",
-    title: "Echoes in the Void",
-    client: "The Wandering Souls (Band)",
-    year: "2023",
-    category: "Music Video",
-    role: "Director of Photography & Editor",
+    title: "Investment in Physical Gold",
+    client: "Niraj Dugar",
+    year: "2024",
+    category: "Finance video",
+    role: "Video and audio Editor",
     tools: ["Premiere Pro", "DaVinci Resolve", "After Effects"],
-    problem: "An indie band needed a visually striking music video on a minimal budget that would help them stand out in a saturated market and attract label attention.",
+    problem: "Client needed a explainer videos to educate users about complex financial products (credit cards, loans, investments) in an approachable, non-intimidating way.",
     process: "Shot over two days using natural lighting and practical effects. Experimented with in-camera techniques (slow motion, double exposure) to create a dreamlike aesthetic. In post-production, applied a vintage film look and added subtle glitch effects.",
     solution: "Delivered a hauntingly beautiful music video that matched the melancholic tone of the song. Used creative editing techniques, color grading, and minimal VFX to create a high-production feel on a DIY budget.",
     outcome: "Video went viral with 3.2M+ views on YouTube, landing the band a record deal. Featured on Rolling Stone India's 'Best Music Videos of 2023' list. The band's Spotify streams increased by 600%.",
-    heroImage: "https://images.unsplash.com/photo-1511379938547-c1f69419868d?w=1200&q=80",
+    heroImage: "/FT5K581K7ck-HD.jpg",
     images: [
       "https://images.unsplash.com/photo-1511379938547-c1f69419868d?w=800&q=80",
       "https://images.unsplash.com/photo-1493225457124-a3eb161ffa5f?w=800&q=80"
-    ]
+    ],
+    link:"https://www.youtube.com/watch?v=FT5K581K7ck",
   },
   {
     id: "nonprofit-awareness",
-    title: "Voices of Hope",
-    client: "Hope Foundation India",
+    title: "Truth Behind Kashmir Conflicts",
+    client: "Jai and Bharat show",
     year: "2023",
     category: "Social Impact",
-    role: "Motion Designer & Editor",
+    role: "Podcast Editor",
     tools: ["After Effects", "Premiere Pro", "Illustrator"],
     problem: "A nonprofit working with underprivileged children needed an awareness campaign video to drive donations and volunteer sign-ups for their annual fundraiser.",
     process: "Conducted interviews with beneficiaries, volunteers, and staff. Created an emotional narrative arc highlighting real impact stories. Designed animated infographics to present data compellingly. Worked pro bono to support the cause.",
@@ -190,7 +206,8 @@ export const projects: Project[] = [
       author: "Dr. Anjali Verma",
       position: "Director, Hope Foundation India"
     },
-    heroImage: "https://images.unsplash.com/photo-1488521787991-ed7bbaae773c?w=1200&q=80",
+    link:"https://www.youtube.com/watch?v=u6__HMDbA8k&t=56s",
+    heroImage: "/imgi_2_image15.jpg",
     images: [
       "https://images.unsplash.com/photo-1488521787991-ed7bbaae773c?w=800&q=80",
       "https://images.unsplash.com/photo-1469571486292-0ba58a3f068b?w=800&q=80"
@@ -208,11 +225,12 @@ export const projects: Project[] = [
     process: "Coordinated a team of 3 videographers to cover simultaneous sessions. Conducted on-the-fly interviews with speakers and attendees. Edited daily highlight reels each evening for next-day social media release.",
     solution: "Delivered three daily recap videos (2-3 minutes each) and one comprehensive highlight reel (8 minutes). Used dynamic cuts, split-screens, and energetic music to match the summit's innovation theme.",
     outcome: "Videos generated 900K+ combined views, extended event reach by 400%, and contributed to 60% higher ticket sales for the following year's summit. Client secured 5 new event sponsorships based on the video content.",
-    heroImage: "https://images.unsplash.com/photo-1540575467063-178a50c2df87?w=1200&q=80",
+    heroImage: "/Image-729.jpg",
     images: [
       "https://images.unsplash.com/photo-1540575467063-178a50c2df87?w=800&q=80",
       "https://images.unsplash.com/photo-1505373877841-8d25f7d46678?w=800&q=80"
-    ]
+    ],
+    link:"https://www.instagram.com/reel/DNFZQR6t4nQ/",
   },
   {
     id: "product-launch-apple",

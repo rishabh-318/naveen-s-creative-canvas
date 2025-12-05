@@ -9,27 +9,33 @@ interface ProjectCardProps {
 
 const ProjectCard = ({ project, className }: ProjectCardProps) => {
   return (
-    <Link
-      to={`/project/${project.id}`}
-      className={cn(
+   <div className={cn(
         "group relative overflow-hidden rounded-xl bg-card hover-lift",
         className
-      )}
-    >
-      <div className="aspect-[4/3] overflow-hidden">
+      )}>
+
+        <div className="aspect-[4/3] overflow-hidden rounded-lg">
         <img
           src={project.heroImage}
           alt={project.title}
           className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
           loading="lazy"
         />
-        <div className="absolute inset-0 bg-gradient-to-t from-primary/90 via-primary/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
-        <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-          <span className="text-white text-lg font-semibold px-6 py-3 bg-accent rounded-full">
+        <div className=" rounded-lg absolute inset-0 bg-gradient-to-t from-primary/90 via-primary/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+        <div className="absolute inset-0 gap-6 flex flex-col items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+          <Link
+      to={project.link}
+      target="_blank"
+    ><span className=" text-white text-lg font-semibold px-6 py-3 bg-accent rounded-full">
+            View Video
+          </span></Link>
+          {/* <Link
+      to={`/project/${project.id}`}
+    >      <span className="text-white text-lg font-semibold px-6 py-3 bg-accent rounded-full">
             View Project
-          </span>
+          </span></Link> */}
         </div>
-      </div>
+      </div>  
       <div className="p-6">
         <div className="flex items-center gap-3 mb-2 text-sm text-muted-foreground">
           <span>{project.client}</span>
@@ -48,7 +54,7 @@ const ProjectCard = ({ project, className }: ProjectCardProps) => {
           </span>
         </div>
       </div>
-    </Link>
+    </div>
   );
 };
 

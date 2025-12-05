@@ -4,6 +4,7 @@ import { ArrowDown, Play } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import ProjectCard from "@/components/ProjectCard";
 import { projects } from "@/data/portfolio";
+import TestimonialsPage from "@/components/Testimonial";
 
 const Home = () => {
   const heroRef = useRef<HTMLDivElement>(null);
@@ -108,7 +109,7 @@ const Home = () => {
                 <span className="inline-block animate-slide-up text-white">Social Media Strategist</span>
                 <br />
                 <span className="inline-block animate-slide-up text-accent drop-shadow-[0_0_30px_rgba(253,107,82,0.8)]" style={{ animationDelay: '0.2s' }}>
-                  Video Producer
+                  Video Editor
                 </span>
               </h1>
               <p className="text-xl md:text-2xl text-white animate-fade-in drop-shadow-lg" style={{ animationDelay: '0.4s' }}>
@@ -188,28 +189,32 @@ const Home = () => {
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mt-12">
               <div className="p-6 bg-card rounded-xl">
                 <Play className="text-accent mx-auto mb-4" size={40} />
-                <h3 className="text-xl font-bold mb-2">Motion Design</h3>
+                <h3 className="text-xl font-bold mb-2">Digital Content Creation</h3>
                 <p className="text-muted-foreground">
-                  Dynamic animations and kinetic typography that bring brands to life
+                  Engaging, platform-ready content crafted to capture attention and drive results
                 </p>
               </div>
               <div className="p-6 bg-card rounded-xl">
                 <Play className="text-accent mx-auto mb-4" size={40} />
-                <h3 className="text-xl font-bold mb-2">Video Editing</h3>
+                <h3 className="text-xl font-bold mb-2">Video Editing + Motion Graphics</h3>
                 <p className="text-muted-foreground">
-                  Precision editing and color grading for impactful storytelling
+                  Precision editing and Motion Graphics for impactful storytelling
                 </p>
               </div>
               <div className="p-6 bg-card rounded-xl">
                 <Play className="text-accent mx-auto mb-4" size={40} />
-                <h3 className="text-xl font-bold mb-2">Brand Films</h3>
+                <h3 className="text-xl font-bold mb-2"> Social Media Management</h3>
                 <p className="text-muted-foreground">
-                  Compelling narratives that connect brands with their audiences
+                  Strategic content planning and execution that boosts brand visibility and engagement
                 </p>
               </div>
             </div>
           </div>
         </div>
+      </section>
+
+      <section>
+        <TestimonialsPage />
       </section>
 
       {/* CTA Section */}

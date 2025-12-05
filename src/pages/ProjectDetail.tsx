@@ -36,7 +36,7 @@ const ProjectDetail = () => {
       {/* Hero Image */}
       <div className="w-full h-[60vh] relative overflow-hidden animate-fade-in">
         <img
-          src={project.heroImage}
+          src={"/influencer-their-pet-creating-content-online-spaces-social-media.jpg"}
           alt={project.title}
           className="w-full h-full object-cover"
         />
