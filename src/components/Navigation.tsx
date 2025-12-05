@@ -34,20 +34,20 @@ const Navigation = () => {
         "fixed top-0 left-0 right-0 z-50 transition-all duration-300",
         isScrolled
           ? "bg-background/95 backdrop-blur-md shadow-sm"
-          : "bg-transparent"
+          : "bg-black"
       )}
     >
       <div className="container mx-auto px-6 py-4">
         <div className="flex items-center justify-between">
           <Link
             to="/"
-            className="text-2xl font-bold text-foreground hover:text-accent transition-colors"
+            className={cn("text-2xl font-bold text-white hover:text-accent transition-colors", isScrolled? "text-black" : "")}
           >
             Naveen Sundriyal
           </Link>
 
           {/* Desktop Navigation */}
-          <div className="hidden md:flex items-center gap-8">
+          <div className="hidden md:flex items-center gap-8 ">
             {navLinks.map((link) => (
               <Link
                 key={link.path}
@@ -55,8 +55,8 @@ const Navigation = () => {
                 className={cn(
                   "text-sm font-medium transition-colors relative group",
                   location.pathname === link.path
-                    ? "text-accent"
-                    : "text-foreground hover:text-accent"
+                    ? "text-accent" : isScrolled? "text-black"
+                    : "text-white hover:text-accent"
                 )}
               >
                 {link.name}

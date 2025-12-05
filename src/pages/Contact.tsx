@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import { Mail, Phone, MapPin, Linkedin, Instagram } from "lucide-react";
+import { Mail, Phone, MapPin, Linkedin, Instagram, Twitter } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
@@ -34,36 +34,49 @@ const Contact = () => {
   }, []);
 
   const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault();
-    
-    // Basic validation
-    if (!formData.name || !formData.email || !formData.message) {
-      toast({
-        title: "Error",
-        description: "Please fill in all fields",
-        variant: "destructive",
-      });
-      return;
-    }
+  e.preventDefault();
 
-    // Email validation
-    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-    if (!emailRegex.test(formData.email)) {
-      toast({
-        title: "Error",
-        description: "Please enter a valid email address",
-        variant: "destructive",
-      });
-      return;
-    }
-
+  // Basic validation
+  if (!formData.name || !formData.email || !formData.message) {
     toast({
-      title: "Message Sent!",
-      description: "Thank you for reaching out. I'll get back to you soon.",
+      title: "Error",
+      description: "Please fill in all fields",
+      variant: "destructive",
     });
+    return;
+  }
 
-    setFormData({ name: "", email: "", message: "" });
-  };
+  // Email validation
+  const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+  if (!emailRegex.test(formData.email)) {
+    toast({
+      title: "Error",
+      description: "Please enter a valid email address",
+      variant: "destructive",
+    });
+    return;
+  }
+
+  // WhatsApp message content
+  const whatsappMessage = `New Portfolio Enquiry%0A%0AName: ${formData.name}%0AEmail: ${formData.email}%0AMessage: ${formData.message}`;
+
+  // Your WhatsApp number (with country code)
+  const phoneNumber = "919557990153"; // <-- your number
+
+  // WhatsApp URL
+  const whatsappUrl = `https://wa.me/${phoneNumber}?text=${whatsappMessage}`;
+
+  // Open WhatsApp
+  window.open(whatsappUrl, "_blank");
+
+  toast({
+    title: "Redirecting to WhatsApp...",
+    description: "You can send your message directly from there.",
+  });
+
+  setFormData({ name: "", email: "", message: "" });
+};
+
 
   const handleChange = (
     e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
@@ -148,6 +161,16 @@ const Contact = () => {
                     className="w-12 h-12 bg-accent/10 text-accent rounded-full flex items-center justify-center hover:bg-accent hover:text-white transition-all"
                   >
                     <Linkedin size={20} />
+                  </a>
+                )}
+                {personalInfo.socials.Twitter && (
+                  <a
+                    href={personalInfo.socials.Twitter}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="w-12 h-12 bg-accent/10 text-accent rounded-full flex items-center justify-center hover:bg-accent hover:text-white transition-all"
+                  >
+                    <Twitter size={20} />
                   </a>
                 )}
                 {personalInfo.socials.instagram && (

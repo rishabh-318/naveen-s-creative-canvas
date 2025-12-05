@@ -47,6 +47,12 @@ const About = () => {
               ))}
               <div className="pt-6">
                 <Button
+                  onClick={() => {
+    const link = document.createElement("a");
+    link.href = "/Naveen portfolio.pdf"; // file inside public folder
+    link.download = "Naveen-Sundriyal-Resume.pdf"; // name for download
+    link.click();
+  }}
                   size="lg"
                   className="bg-accent hover:bg-accent/90 text-white flex items-center gap-2"
                 >

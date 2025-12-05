@@ -31,10 +31,11 @@ export interface PersonalInfo {
   bio: string[];
   socials: {
     linkedin?: string;
-    behance?: string;
+    Twitter?: string;
     dribbble?: string;
-    vimeo?: string;
+    Naukri?: string;
     instagram?: string;
+    
   };
 }
 
@@ -45,7 +46,7 @@ export interface Skill {
 
 export const personalInfo: PersonalInfo = {
   name: "Naveen Sundriyal",
-  title: "Social Media StrategistVideo Editor",
+  title: "Social Media Strategist and Video Editor",
   tagline: "Crafting compelling visual stories for brands that dare to stand out",
   email: "nsundriyal62@gmail.com",
   phone: "+91 95579 90153",
