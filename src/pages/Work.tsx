@@ -44,14 +44,13 @@ const Work = () => {
           <h1 className="text-5xl md:text-6xl font-bold text-foreground mb-4">
             My Work
           </h1>
-          <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
-            A collection of projects spanning brand films, explainers, music videos,
-            and more
+          <p className="text-xl text-muted-foreground max-w-6xl mx-auto">
+            Diverse media expertise: long-form videos, short reels, podcasts, and creative brand content
           </p>
         </div>
 
         {/* Category Filter */}
-        <div className="mb-12 flex flex-wrap justify-center gap-3 animate-fade-in">
+        {/* <div className="mb-12 flex flex-wrap justify-center gap-3 animate-fade-in">
           {categories.map((category) => (
             <Button
               key={category}
@@ -66,7 +65,7 @@ const Work = () => {
               {category}
             </Button>
           ))}
-        </div>
+        </div> */}
 
         {/* Projects Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
