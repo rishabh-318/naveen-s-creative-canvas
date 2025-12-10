@@ -84,7 +84,7 @@ const longFormVideos: Project[] = [
     client: "Kunaal Naik",
     year: "2025",
     category: "Explainer Animation",
-    role: "Youtube Video",
+    role: "Explainer Video",
     heroImage: "/o7adDf5tS9I-HD.jpg",
     link: "https://www.youtube.com/watch?v=o7adDf5tS9I"
   },
@@ -94,7 +94,7 @@ const longFormVideos: Project[] = [
     client: "Niraj Dugar",
     year: "2025",
     category: "Finance video",
-    role: "Youtube Video",
+    role: "Talking Head Video",
     heroImage: "/FT5K581K7ck-HD.jpg",
     link: "https://www.youtube.com/watch?v=FT5K581K7ck"
   },
@@ -104,7 +104,7 @@ const longFormVideos: Project[] = [
     client: "Dr. Anshul Sadhale",
     year: "2025",
     category: "Documentary",
-    role: "Youtube Video",
+    role: "Fitness Information Video",
     heroImage: "/xTbjs8TcRX4-HD.jpg",
     link: "https://www.youtube.com/watch?v=xTbjs8TcRX4"
   },
@@ -114,7 +114,7 @@ const longFormVideos: Project[] = [
     client: "Shruti Sonawane",
     year: "2024",
     category: "Educational Content",
-    role: "Youtube Video",
+    role: "Question and Answer Session",
     heroImage: "/d3od05LQN3k-HD.jpg",
     link: "https://www.youtube.com/watch?v=d3od05LQN3k"
   },
@@ -124,7 +124,7 @@ const longFormVideos: Project[] = [
     client: "Good Vibe Show",
     year: "2023",
     category: "Review Content",
-    role: "Youtube Video",
+    role: "Documentary Style Green Screen",
     heroImage: "/Li1Y2q3Cpmc-HD.jpg",
     link: "https://www.youtube.com/watch?v=Li1Y2q3Cpmc"
   },
@@ -134,7 +134,7 @@ const longFormVideos: Project[] = [
     client: "NIraj Dugar",
     year: "2025",
     category: "Brand Documentary",
-    role: "Youtube Video",
+    role: "Talking Head Finance Videoo",
     heroImage: "/q76T93KfxXQ-HD.jpg",
     link: "https://www.youtube.com/watch?v=q76T93KfxXQ"
   }
@@ -147,59 +147,59 @@ const podcasts: Project[] = [
     client: "Jai and Bharat show",
     year: "2023",
     category: "Social Impact",
-    role: "Podcast Editor",
+    role: "3CAM Podcast",
     heroImage: "/imgi_2_image15.jpg",
     link: "https://www.youtube.com/watch?v=u6__HMDbA8k&t=56s"
   },
   {
     id: "podcast-2",
-    title: "Startup Stories Episode 12",
-    client: "Business Talks",
+    title: "Sameer Anjaan Podcast",
+    client: "Good Vibe Show",
     year: "2024",
     category: "Business Podcast",
-    role: "Audio Editor & Producer",
-    heroImage: "https://images.unsplash.com/photo-1590602847861-f357a9332bbc?w=800&q=80",
-    link: "#"
+    role: "Online Zoom Podcast",
+    heroImage: "/zz8Lytdchj8-HD.jpg",
+    link: "https://youtu.be/zz8Lytdchj8?t=69"
   },
   {
     id: "podcast-3",
-    title: "Tech Talk: AI Revolution",
-    client: "Future Tech Podcast",
-    year: "2024",
+    title: "Journey to Enlightenment",
+    client: "Jai and Bharat show",
+    year: "2022",
     category: "Technology Podcast",
-    role: "Podcast Editor",
-    heroImage: "https://images.unsplash.com/photo-1478737270239-2f02b77fc618?w=800&q=80",
-    link: "#"
+    role: "3CAM Podcast",
+    heroImage: "/r58hkgzGRf0-HD.jpg",
+    link: "https://www.youtube.com/watch?v=r58hkgzGRf0"
   },
   {
     id: "podcast-4",
-    title: "Creative Minds Interview",
-    client: "Design Weekly",
+    title: "Ram mandir celebration",
+    client: "Good Vibe Show",
     year: "2023",
     category: "Design Podcast",
-    role: "Audio Engineer",
-    heroImage: "https://images.unsplash.com/photo-1589903308904-1010c2294adc?w=800&q=80",
-    link: "#"
+    role: "Online Zoom Podcast",
+    heroImage: "/dL4cFwyp5dQ-HD.jpg",
+    link: "https://youtu.be/dL4cFwyp5dQ?t=102"
   },
   {
     id: "podcast-5",
-    title: "Health & Wellness Series",
-    client: "Mindful Living",
+    title: "Forensics Expert Gaurav Batra",
+    client: "Jai and Bharat Show",
     year: "2023",
     category: "Wellness Podcast",
-    role: "Podcast Editor",
-    heroImage: "https://images.unsplash.com/photo-1535361406637-c3b6659e5fc7?w=800&q=80",
-    link: "#"
+    role: "3CAM Podcast",
+    heroImage: "/6Rb2yRRbyDQ-HD.jpg",
+    link: "https://youtu.be/6Rb2yRRbyDQ?si=cVcGqa8jhjZjGVgT"
   },
   {
     id: "podcast-6",
-    title: "Finance Insights Weekly",
-    client: "Money Matters Show",
-    year: "2023",
+    title: "Altaf Raja Podcast",
+    client: "Good Vibe Show",
+    year: "2024",
     category: "Finance Podcast",
-    role: "Audio Producer",
-    heroImage: "https://images.unsplash.com/photo-1590650153855-d9e808231d41?w=800&q=80",
-    link: "#"
+    role: "Online Zoom Podcast",
+    heroImage: "/HaJZ1xOlF6k-HD.jpg",
+    link: "https://youtu.be/HaJZ1xOlF6k?t=40"
   }
 ];
 
