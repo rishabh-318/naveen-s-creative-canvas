@@ -82,9 +82,9 @@ const longFormVideos: Project[] = [
     id: "fintech-explainer",
     title: "WhatsApp AI Agent",
     client: "Kunaal Naik",
-    year: "2024",
+    year: "2025",
     category: "Explainer Animation",
-    role: "Video editor",
+    role: "Youtube Video",
     heroImage: "/o7adDf5tS9I-HD.jpg",
     link: "https://www.youtube.com/watch?v=o7adDf5tS9I"
   },
@@ -92,51 +92,51 @@ const longFormVideos: Project[] = [
     id: "music-video-indie",
     title: "Investment in Physical Gold",
     client: "Niraj Dugar",
-    year: "2024",
+    year: "2025",
     category: "Finance video",
-    role: "Video and audio Editor",
+    role: "Youtube Video",
     heroImage: "/FT5K581K7ck-HD.jpg",
     link: "https://www.youtube.com/watch?v=FT5K581K7ck"
   },
   {
     id: "long-form-3",
-    title: "Corporate Documentary",
-    client: "Global Enterprises",
-    year: "2023",
+    title: "The Skinny Fat Solution",
+    client: "Dr. Anshul Sadhale",
+    year: "2025",
     category: "Documentary",
-    role: "Video Editor & Colorist",
-    heroImage: "https://images.unsplash.com/photo-1485846234645-a62644f84728?w=800&q=80",
-    link: "#"
+    role: "Youtube Video",
+    heroImage: "/xTbjs8TcRX4-HD.jpg",
+    link: "https://www.youtube.com/watch?v=xTbjs8TcRX4"
   },
   {
     id: "long-form-4",
-    title: "Educational Series Ep. 1",
-    client: "EduTech Platform",
-    year: "2023",
+    title: "Placements at IIM - QNA",
+    client: "Shruti Sonawane",
+    year: "2024",
     category: "Educational Content",
-    role: "Lead Editor",
-    heroImage: "https://images.unsplash.com/photo-1522869635100-9f4c5e86aa37?w=800&q=80",
-    link: "#"
+    role: "Youtube Video",
+    heroImage: "/d3od05LQN3k-HD.jpg",
+    link: "https://www.youtube.com/watch?v=d3od05LQN3k"
   },
   {
     id: "long-form-5",
-    title: "Product Review Deep Dive",
-    client: "Tech Review Channel",
+    title: "Maha Kumbh Mela 2025",
+    client: "Good Vibe Show",
     year: "2023",
     category: "Review Content",
-    role: "Video Editor",
-    heroImage: "https://images.unsplash.com/photo-1551817958-20c1b2a2a4e5?w=800&q=80",
-    link: "#"
+    role: "Youtube Video",
+    heroImage: "/Li1Y2q3Cpmc-HD.jpg",
+    link: "https://www.youtube.com/watch?v=Li1Y2q3Cpmc"
   },
   {
     id: "long-form-6",
-    title: "Brand Story Documentary",
-    client: "Heritage Brands",
-    year: "2023",
+    title: "Top 23 Grocery Cards",
+    client: "NIraj Dugar",
+    year: "2025",
     category: "Brand Documentary",
-    role: "Video Editor & Cinematographer",
-    heroImage: "https://images.unsplash.com/photo-1574717024653-61fd2cf4d44d?w=800&q=80",
-    link: "#"
+    role: "Youtube Video",
+    heroImage: "/q76T93KfxXQ-HD.jpg",
+    link: "https://www.youtube.com/watch?v=q76T93KfxXQ"
   }
 ];
 
