@@ -1,6 +1,6 @@
 import { useEffect } from "react";
 import { personalInfo, skills, tools } from "@/data/portfolio";
-import { Download } from "lucide-react";
+import { Download, LocateIcon, Mail, Phone } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
 const About = () => {
@@ -24,14 +24,14 @@ const About = () => {
   }, []);
 
   return (
-    <div className="min-h-screen pt-32 pb-20 px-6">
+    <div className="min-h-screen pt-32 pb-20 px-6 ">
       <div className="container mx-auto max-w-5xl">
         {/* Header */}
-        <div className="text-center mb-16 animate-fade-in">
-          <h1 className="text-5xl md:text-6xl font-bold text-foreground mb-4">
+        <div className="text-center mb-12 sm:mb-16 animate-fade-in">
+          <h1 className="text-3xl sm:text-5xl md:text-6xl font-bold text-foreground mb-2 sm:mb-4">
             About Me
           </h1>
-          <p className="text-xl text-muted-foreground">
+          <p className="text-sm sm:text-xl text-muted-foreground">
             {personalInfo.title}
           </p>
         </div>
@@ -41,7 +41,7 @@ const About = () => {
           <div className="grid grid-cols-1 md:grid-cols-3 gap-12">
             <div className="md:col-span-2 space-y-6">
               {personalInfo.bio.map((paragraph, index) => (
-                <p key={index} className="text-lg text-muted-foreground leading-relaxed">
+                <p key={index} className="text-sm sm:text-xl text-muted-foreground leading-relaxed">
                   {paragraph}
                 </p>
               ))}
@@ -54,7 +54,7 @@ const About = () => {
     link.click();
   }}
                   size="lg"
-                  className="bg-accent hover:bg-accent/90 text-white flex items-center gap-2"
+                  className="bg-accent hover:bg-accent/90 text-white text-sm sm:text-xl flex items-center gap-2"
                 >
                   <Download size={20} />
                   Download Resume
@@ -62,48 +62,83 @@ const About = () => {
               </div>
             </div>
 
-            <div className="space-y-6">
-              <div>
-                <h3 className="text-sm font-semibold text-muted-foreground mb-2">
-                  Email
-                </h3>
-                <a
-                  href={`mailto:${personalInfo.email}`}
-                  className="text-foreground hover:text-accent transition-colors"
-                >
-                  {personalInfo.email}
-                </a>
-              </div>
-              <div>
-                <h3 className="text-sm font-semibold text-muted-foreground mb-2">
-                  Phone
-                </h3>
-                <a
-                  href={`tel:${personalInfo.phone}`}
-                  className="text-foreground hover:text-accent transition-colors"
-                >
-                  {personalInfo.phone}
-                </a>
-              </div>
-              <div>
-                <h3 className="text-sm font-semibold text-muted-foreground mb-2">
-                  Location
-                </h3>
-                <p className="text-foreground">{personalInfo.location}</p>
-              </div>
-            </div>
+            <div className="w-full space-y-8">
+
+  <div className="grid gap-8 ">
+
+    {/* Email */}
+    <div className="flex items-start gap-4">
+      <div className="p-2 rounded-lg bg-white/5 border border-white/30">
+        <Mail className="text-accent w-5 h-5" />
+      </div>
+
+      <div className="space-y-1">
+        <h3 className="text-xs font-semibold uppercase text-white/50 tracking-wider">
+          Email
+        </h3>
+        <a
+          href={`mailto:${personalInfo.email}`}
+          className="text-base font-medium text-white/90 hover:text-accent transition-colors"
+        >
+          {personalInfo.email}
+        </a>
+      </div>
+    </div>
+
+    {/* Phone */}
+    <div className="flex items-start gap-4">
+      <div className="p-2 rounded-lg bg-white/5 border border-white/30">
+        <Phone className="text-accent w-5 h-5" />
+      </div>
+
+      <div className="space-y-1">
+        <h3 className="text-xs font-semibold uppercase text-white/50 tracking-wider">
+          Phone
+        </h3>
+        <a
+          href={`tel:${personalInfo.phone}`}
+          className="text-base font-medium text-white/90 hover:text-accent transition-colors"
+        >
+          {personalInfo.phone}
+        </a>
+      </div>
+    </div>
+
+  </div>
+
+  <div className="border-t border-white/30"></div>
+
+  {/* Location: full width */}
+  <div className="flex items-start gap-4">
+    <div className="p-2 rounded-lg bg-white/5 border border-white/30">
+      <LocateIcon className="text-accent w-5 h-5" />
+    </div>
+
+    <div className="space-y-1">
+      <h3 className="text-xs font-semibold uppercase text-white/50 tracking-wider">
+        Location
+      </h3>
+      <p className="text-base font-medium text-white/90">
+        {personalInfo.location}
+      </p>
+    </div>
+  </div>
+
+</div>
+
+
           </div>
         </div>
 
         {/* Skills Section */}
         <div className="mb-20 fade-in-section">
-          <h2 className="text-3xl font-bold text-foreground mb-8">Skills & Expertise</h2>
+          <h2 className="text-2xl sm:text-3xl font-bold text-foreground mb-8">Skills & Expertise</h2>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
             {skills.map((skill) => (
               <div key={skill.name} className="space-y-2">
                 <div className="flex justify-between items-center">
-                  <span className="text-foreground font-medium">{skill.name}</span>
-                  <span className="text-muted-foreground text-sm">{skill.level}%</span>
+                  <span className="text-foreground text-sm sm:text-lg font-medium">{skill.name}</span>
+                  <span className="text-muted-foreground text-xs sm:text-sm">{skill.level}%</span>
                 </div>
                 <div className="h-2 bg-secondary rounded-full overflow-hidden">
                   <div
@@ -118,14 +153,14 @@ const About = () => {
 
         {/* Tools Section */}
         <div className="fade-in-section">
-          <h2 className="text-3xl font-bold text-foreground mb-8">Tools & Software</h2>
+          <h2 className="text-2xl sm:text-3xl font-bold text-foreground mb-8">Tools & Software</h2>
           <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
             {tools.map((tool) => (
               <div
                 key={tool}
                 className="p-4 bg-card border border-border rounded-lg text-center hover-lift"
               >
-                <p className="font-medium text-foreground">{tool}</p>
+                <p className="font-medium text-foreground text-sm sm:text-lg">{tool}</p>
               </div>
             ))}
           </div>
@@ -133,10 +168,10 @@ const About = () => {
 
         {/* CTA */}
         <div className="mt-20 text-center p-12 bg-muted rounded-2xl fade-in-section">
-          <h2 className="text-3xl font-bold text-foreground mb-4">
+          <h2 className="text-xl sm:text-3xl font-bold text-foreground mb-4">
             Interested in Working Together?
           </h2>
-          <p className="text-lg text-muted-foreground mb-8">
+          <p className="text-sm sm:text-lg text-muted-foreground  mb-8">
             I'm always open to discussing new projects and creative opportunities.
           </p>
           <Button

@@ -212,11 +212,11 @@ const ProjectCard = ({ project }: { project: Project }) => {
       rel="noopener noreferrer"
       className="group block bg-card rounded-xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300 hover:-translate-y-2"
     >
-      <div className="relative h-64 overflow-hidden bg-gray-200">
+      <div className="relative h-54 overflow-hidden bg-gray-200">
         <img
           src={project.heroImage}
           alt={project.title}
-          className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
+          className="w-full h-full object-cover group-hover:scale-110 aspect-video transition-transform duration-500"
           onError={(e) => {
             e.currentTarget.src = "https://images.unsplash.com/photo-1492619375914-88005aa9e8fb?w=800&q=80";
           }}
@@ -227,13 +227,13 @@ const ProjectCard = ({ project }: { project: Project }) => {
       </div>
       <div className="p-6">
         <div className="flex justify-between items-start mb-2">
-          <h3 className="text-xl font-bold text-foreground group-hover:text-accent transition-colors">
+          <h3 className="sm:text-xl font-bold text-foreground group-hover:text-accent transition-colors">
             {project.title}
           </h3>
-          <span className="text-sm text-muted-foreground">{project.year}</span>
+          <span className="text-xs sm:text-sm text-muted-foreground">{project.year}</span>
         </div>
-        <p className="text-muted-foreground mb-2">{project.client}</p>
-        <p className="text-sm text-muted-foreground">{project.role}</p>
+        <p className="text-muted-foreground text-sm sm:text-xl sm:mb-2">{project.client}</p>
+        <p className="text-sm text-muted-foreground text-sm sm:text-xl">{project.role}</p>
       </div>
     </a>
   );
@@ -277,8 +277,8 @@ const ProjectSection = ({
   return (
     <div className="mb-20" id={sectionId}>
       <div className="flex items-center gap-3 mb-8">
-        <Icon className="w-8 h-8 text-accent" />
-        <h2 className="text-3xl md:text-4xl font-bold text-foreground">
+        <Icon className="w-6 h-6 sm:w-8 sm:h-8 text-accent" />
+        <h2 className="text-xl sm:text-3xl md:text-4xl font-bold text-foreground">
           {title}
         </h2>
         <div className="flex-1 h-0.5 bg-gradient-to-r from-accent/50 to-transparent ml-4"></div>
@@ -298,7 +298,7 @@ const ProjectSection = ({
         <div className="flex justify-center mt-8">
           <button
             onClick={() => setShowAll(!showAll)}
-            className="px-6 py-3 bg-accent hover:bg-accent/90 text-white rounded-lg transition-all duration-300 hover:shadow-lg font-medium"
+            className="px-6  text-white hover:text-accent transition-all duration-300  font-medium"
           >
             {showAll ? "Show Less" : "See More"}
           </button>
@@ -314,11 +314,11 @@ const Work = () => {
       <div className="container mx-auto max-w-7xl">
         {/* Header */}
         <div className="mb-16 text-center animate-fade-in">
-          <h1 className="text-5xl md:text-6xl font-bold text-foreground mb-4">
+          <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold text-foreground mb-4">
             My Work
           </h1>
-          <p className="text-xl text-muted-foreground max-w-6xl mx-auto">
-            Diverse media expertise: long-form videos, short reels, podcasts, and creative brand content
+          <p className="sm:text-xl text-muted-foreground max-w-6xl mx-auto">
+            Diverse media expertise: <span className="text-white">long-form videos</span>, <span className="text-white">short reels</span>, <span className="text-white">podcasts</span>, and <span className="text-white">creative brand content</span>
           </p>
         </div>
 

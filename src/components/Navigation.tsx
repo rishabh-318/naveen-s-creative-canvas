@@ -31,17 +31,17 @@ const Navigation = () => {
   return (
     <nav
       className={cn(
-        "fixed top-0 left-0 right-0 z-50 transition-all duration-300",
+        "fixed top-0 left-0 right-0 z-50 transition-all duration-300 ",
         isScrolled
-          ? "bg-background/95 backdrop-blur-md shadow-sm"
-          : "bg-black"
+          ? "bg-background/95 shadow-sm"
+          : "bg-transparent"
       )}
     >
-      <div className="container mx-auto px-6 py-4">
-        <div className="flex items-center justify-between">
+      <div className="py-4">
+        <div className="flex items-center justify-between px-6">
           <Link
             to="/"
-            className={cn("text-2xl font-bold text-white hover:text-accent transition-colors", isScrolled? "text-black" : "")}
+            className={cn("text-lg sm:text-2xl font-bold text-white hover:text-accent transition-colors", isScrolled? "text-black" : "")}
           >
             Naveen Sundriyal
           </Link>
@@ -83,7 +83,7 @@ const Navigation = () => {
 
         {/* Mobile Navigation */}
         {isOpen && (
-          <div className="md:hidden mt-4 pb-4 animate-fade-in">
+          <div className="md:hidden mt-4 pb-4 bg-background/95 animate-fade-in px-6">
             <div className="flex flex-col gap-4">
               {navLinks.map((link) => (
                 <Link

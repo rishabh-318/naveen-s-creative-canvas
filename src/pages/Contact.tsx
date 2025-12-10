@@ -89,10 +89,10 @@ const Contact = () => {
       <div className="container mx-auto max-w-5xl">
         {/* Header */}
         <div className="text-center mb-16 animate-fade-in">
-          <h1 className="text-5xl md:text-6xl font-bold text-foreground mb-4">
+          <h1 className="text-3xl sm:text-5xl md:text-6xl font-bold text-foreground mb-4">
             Let's Connect
           </h1>
-          <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
+          <p className="text-sm sm:text-xl text-muted-foreground max-w-2xl mx-auto">
             Have a project in mind or just want to chat? I'd love to hear from you.
           </p>
         </div>
@@ -101,7 +101,7 @@ const Contact = () => {
           {/* Contact Info */}
           <div className="space-y-8 fade-in-section">
             <div>
-              <h2 className="text-3xl font-bold text-foreground mb-8">
+              <h2 className="text-2xl sm:text-3xl font-bold text-foreground mb-8">
                 Get in Touch
               </h2>
               <div className="space-y-6">

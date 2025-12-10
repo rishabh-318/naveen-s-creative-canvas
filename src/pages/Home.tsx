@@ -35,7 +35,7 @@ const Home = () => {
       {/* Hero Section */}
       <section
         ref={heroRef}
-        className="relative min-h-screen flex items-center justify-center pt-20 pb-16 px-6 overflow-hidden"
+        className="relative min-h-screen flex items-center justify-center pt-20 pb-12 px-6 overflow-hidden"
       >
         {/* Video Background */}
         <div className="absolute inset-0 w-full h-full overflow-hidden">
@@ -88,9 +88,9 @@ const Home = () => {
             {/* Designer Image with Cool Animation */}
             <div className="relative group">
               <div className="absolute inset-0 bg-accent/30 rounded-full blur-3xl animate-pulse-glow" />
-              <div className="relative w-72 h-72 md:w-96 md:h-96 rounded-full overflow-hidden border-4 border-accent/50 animate-scale-in shadow-2xl">
+              <div className="relative w-60 h-60 sm:w-72 sm:h-72 md:w-96 md:h-96 rounded-full overflow-hidden border-4 border-accent/50 animate-scale-in shadow-2xl">
                 <img
-                  src="/PP.png"
+                  src="/Gemini_Generated_Image_ls1xv8ls1xv8ls1x.webp"
                   alt="Naveen Sundriyal"
                   className="scale-110 w-full h-full object-cover transition-transform duration-700 "
                 />
@@ -98,24 +98,24 @@ const Home = () => {
                 <div className="absolute inset-0 rounded-full border-4 border-transparent border-t-accent border-r-accent animate-rotate-slow" />
               </div>
               {/* Floating icons around image */}
-              <div className="absolute -top-4 -right-4 w-16 h-16 bg-accent rounded-xl flex items-center justify-center animate-float shadow-lg">
-                <Play className="text-white" size={32} />
+              <div className="absolute -top-4 -right-4 w-12 h-12 sm:w-16 sm:h-16 bg-accent rounded-xl flex items-center justify-center animate-float shadow-lg">
+                <Play className="text-white w-12 sm:w-24"  />
               </div>
             </div>
 
             {/* Text Content */}
             <div className="max-w-4xl text-center lg:text-left space-y-8 animate-fade-in">
-              <h1 className="text-5xl md:text-7xl font-bold leading-tight drop-shadow-2xl">
+              <h1 className="text-3xl sm:text-5xl md:text-7xl font-bold leading-tight drop-shadow-2xl">
                 <span className="inline-block animate-slide-up text-white">Social Media Strategist</span>
                 <br />
                 <span className="inline-block animate-slide-up text-accent drop-shadow-[0_0_30px_rgba(253,107,82,0.8)]" style={{ animationDelay: '0.2s' }}>
                   Video Editor
                 </span>
               </h1>
-              <p className="text-xl md:text-2xl text-white animate-fade-in drop-shadow-lg" style={{ animationDelay: '0.4s' }}>
+              <p className="text-lg sm:text-xl md:text-2xl text-white animate-fade-in drop-shadow-lg" style={{ animationDelay: '0.4s' }}>
                 Crafting high-impact digital stories through strategy, editing, and on-camera communication
               </p>
-              <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start items-center pt-6 animate-fade-in" style={{ animationDelay: '0.6s' }}>
+              <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start items-center sm:pt-6 animate-fade-in" style={{ animationDelay: '0.6s' }}>
                 <Button
                   asChild
                   size="lg"
@@ -130,6 +130,13 @@ const Home = () => {
                   className="border-2 border-white/80 bg-white/10 backdrop-blur-sm text-white hover:bg-white hover:text-primary px-8 py-6 text-lg rounded-full shadow-lg hover:shadow-2xl hover:scale-105 transition-all duration-300"
                 >
                   <Link to="/contact">Get In Touch</Link>
+                </Button>
+                <Button
+                  asChild
+                  size="lg"
+                  className="bg-accent hover:bg-accent/90 text-white px-8 py-6 text-lg rounded-full shadow-lg hover:shadow-2xl hover:scale-105 transition-all duration-300"
+                >
+                  <a href="#testimonial">Testimonials</a>
                 </Button>
               </div>
             </div>
@@ -149,7 +156,7 @@ const Home = () => {
             <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-4">
               Featured Work
             </h2>
-            <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
+            <p className="sm:text-lg text-muted-foreground max-w-2xl mx-auto">
               A selection of projects that showcase my approach to Video Editing
             </p>
           </div>
@@ -180,13 +187,13 @@ const Home = () => {
       </section>
 
       {/* Capabilities Section */}
-      <section className="py-24 px-6 bg-muted">
+      <section className="py-12 sm:py-24 px-6 bg-muted">
         <div className="container mx-auto">
           <div className="fade-in-section max-w-3xl mx-auto text-center">
             <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-8">
               What I Do
             </h2>
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mt-12">
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mt-12 text-sm sm:text-lg">
               <div className="p-6 bg-card rounded-xl">
                 <Play className="text-accent mx-auto mb-4" size={40} />
                 <h3 className="text-xl font-bold mb-2">Digital Content Creation</h3>
@@ -213,24 +220,24 @@ const Home = () => {
         </div>
       </section>
 
-      <section>
+      <section id="testimonial">
         <TestimonialsPage />
       </section>
 
       {/* CTA Section */}
-      <section className="py-24 px-6 bg-primary text-primary-foreground">
+      <section className="py-12 sm:py-24 px-6 bg-primary text-primary-foreground">
         <div className="container mx-auto text-center fade-in-section">
-          <h2 className="text-4xl md:text-5xl font-bold mb-6">
+          <h2 className="text-2xl sm:text-4xl md:text-5xl font-bold mb-6">
             Let's Create Something Amazing
           </h2>
-          <p className="text-xl mb-8 max-w-2xl mx-auto opacity-90">
+          <p className="sm:text-xl mb-8 max-w-2xl mx-auto opacity-90">
             Have a project in mind? I'd love to hear about it and explore how we can
             bring your vision to life.
           </p>
           <Button
             asChild
             size="lg"
-            className="bg-accent hover:bg-accent/90 text-white px-8 py-6 text-lg rounded-full"
+            className="bg-accent hover:bg-accent/90 text-white px-8 py-6 sm:text-lg rounded-full"
           >
             <Link to="/contact">Start a Conversation</Link>
           </Button>
