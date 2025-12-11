@@ -32,16 +32,17 @@ const Navigation = () => {
     <nav
       className={cn(
         "fixed top-0 left-0 right-0 z-50 transition-all duration-300 ",
-        isScrolled
-          ? "bg-background/95 shadow-sm"
-          : "bg-transparent"
+        isScrolled ? "bg-background/95 shadow-sm" : "bg-black/30"
       )}
     >
       <div className="py-4">
         <div className="flex items-center justify-between px-6">
           <Link
             to="/"
-            className={cn("text-lg sm:text-2xl font-bold text-white hover:text-accent transition-colors", isScrolled? "text-black" : "")}
+            className={cn(
+              "text-lg sm:text-2xl font-bold text-accent hover:text-accent transition-colors",
+              isScrolled ? "text-black" : ""
+            )}
           >
             Naveen Sundriyal
           </Link>
@@ -55,7 +56,9 @@ const Navigation = () => {
                 className={cn(
                   "text-sm font-medium transition-colors relative group",
                   location.pathname === link.path
-                    ? "text-accent" : isScrolled? "text-black"
+                    ? "text-accent"
+                    : isScrolled
+                    ? "text-black"
                     : "text-white hover:text-accent"
                 )}
               >

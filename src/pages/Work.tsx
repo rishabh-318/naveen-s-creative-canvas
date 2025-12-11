@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react";
 import { Play, Clock, Mic } from "lucide-react";
+import SoundPlayer from "@/components/ui/SoundPlayer";
 
 // Project type definition
 interface Project {
@@ -15,7 +16,7 @@ interface Project {
 
 // Categorized project data
 const shortFormVideos: Project[] = [
-    {
+  {
     id: "corporate-reels",
     title: "Raksha Bandhan 2025",
     client: "Upsurge-Agency",
@@ -23,7 +24,7 @@ const shortFormVideos: Project[] = [
     category: "Event Coverage",
     role: "Instagram reel",
     heroImage: "/Image-729.jpg",
-    link: "https://www.instagram.com/reel/DNFZQR6t4nQ/"
+    link: "https://www.instagram.com/reel/DNFZQR6t4nQ/",
   },
   {
     id: "video-editing-showcase",
@@ -33,7 +34,7 @@ const shortFormVideos: Project[] = [
     category: "Short-Form Content",
     role: "Instagram reel",
     heroImage: "/jio_financial_services.jpg",
-    link: "https://www.instagram.com/reel/DOlgDXMD6ls/"
+    link: "https://www.instagram.com/reel/DOlgDXMD6ls/",
   },
   {
     id: "fintech-explainer-2",
@@ -43,7 +44,7 @@ const shortFormVideos: Project[] = [
     category: "Government Scheme",
     role: "Instagram reel",
     heroImage: "/Image-990.jpg",
-    link: "https://www.instagram.com/reel/DM__TanNAFs/"
+    link: "https://www.instagram.com/reel/DM__TanNAFs/",
   },
   {
     id: "short-form-4",
@@ -53,7 +54,7 @@ const shortFormVideos: Project[] = [
     category: "Product Marketing",
     role: "Foreign Client- Russia",
     heroImage: "/uqBl5yyqTz4-HD.jpg",
-    link: "https://www.youtube.com/watch?v=uqBl5yyqTz4&list=TLGG4a4HgO4otRwxMDEyMjAyNQ"
+    link: "https://www.youtube.com/watch?v=uqBl5yyqTz4&list=TLGG4a4HgO4otRwxMDEyMjAyNQ",
   },
   {
     id: "short-form-5",
@@ -63,7 +64,7 @@ const shortFormVideos: Project[] = [
     category: "Brand Content",
     role: "Instagram Reel",
     heroImage: "/rZI044Brnlk-HD.jpg",
-    link: "https://www.youtube.com/watch?v=rZI044Brnlk&list=TLGG7YS6HmHNALIxMDEyMjAyNQ&t=2s"
+    link: "https://www.youtube.com/watch?v=rZI044Brnlk&list=TLGG7YS6HmHNALIxMDEyMjAyNQ&t=2s",
   },
   {
     id: "short-form-6",
@@ -73,8 +74,8 @@ const shortFormVideos: Project[] = [
     category: "Social Content",
     role: "Youtube Shorts",
     heroImage: "/nl3BrqpL_jQ-HD.jpg",
-    link: "https://www.youtube.com/shorts/nl3BrqpL_jQ"
-  }
+    link: "https://www.youtube.com/shorts/nl3BrqpL_jQ",
+  },
 ];
 
 const longFormVideos: Project[] = [
@@ -86,7 +87,7 @@ const longFormVideos: Project[] = [
     category: "Explainer Animation",
     role: "Explainer Video",
     heroImage: "/o7adDf5tS9I-HD.jpg",
-    link: "https://www.youtube.com/watch?v=o7adDf5tS9I"
+    link: "https://www.youtube.com/watch?v=o7adDf5tS9I",
   },
   {
     id: "music-video-indie",
@@ -96,7 +97,7 @@ const longFormVideos: Project[] = [
     category: "Finance video",
     role: "Talking Head Video",
     heroImage: "/FT5K581K7ck-HD.jpg",
-    link: "https://www.youtube.com/watch?v=FT5K581K7ck"
+    link: "https://www.youtube.com/watch?v=FT5K581K7ck",
   },
   {
     id: "long-form-3",
@@ -106,7 +107,7 @@ const longFormVideos: Project[] = [
     category: "Documentary",
     role: "Fitness Information Video",
     heroImage: "/xTbjs8TcRX4-HD.jpg",
-    link: "https://www.youtube.com/watch?v=xTbjs8TcRX4"
+    link: "https://www.youtube.com/watch?v=xTbjs8TcRX4",
   },
   {
     id: "long-form-4",
@@ -116,7 +117,7 @@ const longFormVideos: Project[] = [
     category: "Educational Content",
     role: "Question and Answer Session",
     heroImage: "/d3od05LQN3k-HD.jpg",
-    link: "https://www.youtube.com/watch?v=d3od05LQN3k"
+    link: "https://www.youtube.com/watch?v=d3od05LQN3k",
   },
   {
     id: "long-form-5",
@@ -126,7 +127,7 @@ const longFormVideos: Project[] = [
     category: "Review Content",
     role: "Documentary Style Green Screen",
     heroImage: "/Li1Y2q3Cpmc-HD.jpg",
-    link: "https://www.youtube.com/watch?v=Li1Y2q3Cpmc"
+    link: "https://www.youtube.com/watch?v=Li1Y2q3Cpmc",
   },
   {
     id: "long-form-6",
@@ -136,8 +137,8 @@ const longFormVideos: Project[] = [
     category: "Brand Documentary",
     role: "Talking Head Finance Videoo",
     heroImage: "/q76T93KfxXQ-HD.jpg",
-    link: "https://www.youtube.com/watch?v=q76T93KfxXQ"
-  }
+    link: "https://www.youtube.com/watch?v=q76T93KfxXQ",
+  },
 ];
 
 const podcasts: Project[] = [
@@ -149,7 +150,7 @@ const podcasts: Project[] = [
     category: "Social Impact",
     role: "3CAM Podcast",
     heroImage: "/imgi_2_image15.jpg",
-    link: "https://www.youtube.com/watch?v=u6__HMDbA8k&t=56s"
+    link: "https://www.youtube.com/watch?v=u6__HMDbA8k&t=56s",
   },
   {
     id: "podcast-2",
@@ -159,7 +160,7 @@ const podcasts: Project[] = [
     category: "Business Podcast",
     role: "Online Zoom Podcast",
     heroImage: "/zz8Lytdchj8-HD.jpg",
-    link: "https://youtu.be/zz8Lytdchj8?t=69"
+    link: "https://youtu.be/zz8Lytdchj8?t=69",
   },
   {
     id: "podcast-3",
@@ -169,7 +170,7 @@ const podcasts: Project[] = [
     category: "Technology Podcast",
     role: "3CAM Podcast",
     heroImage: "/r58hkgzGRf0-HD.jpg",
-    link: "https://www.youtube.com/watch?v=r58hkgzGRf0"
+    link: "https://www.youtube.com/watch?v=r58hkgzGRf0",
   },
   {
     id: "podcast-4",
@@ -179,7 +180,7 @@ const podcasts: Project[] = [
     category: "Design Podcast",
     role: "Online Zoom Podcast",
     heroImage: "/dL4cFwyp5dQ-HD.jpg",
-    link: "https://youtu.be/dL4cFwyp5dQ?t=102"
+    link: "https://youtu.be/dL4cFwyp5dQ?t=102",
   },
   {
     id: "podcast-5",
@@ -189,7 +190,7 @@ const podcasts: Project[] = [
     category: "Wellness Podcast",
     role: "3CAM Podcast",
     heroImage: "/6Rb2yRRbyDQ-HD.jpg",
-    link: "https://youtu.be/6Rb2yRRbyDQ?si=cVcGqa8jhjZjGVgT"
+    link: "https://youtu.be/6Rb2yRRbyDQ?si=cVcGqa8jhjZjGVgT",
   },
   {
     id: "podcast-6",
@@ -199,12 +200,16 @@ const podcasts: Project[] = [
     category: "Finance Podcast",
     role: "Online Zoom Podcast",
     heroImage: "/HaJZ1xOlF6k-HD.jpg",
-    link: "https://youtu.be/HaJZ1xOlF6k?t=40"
-  }
+    link: "https://youtu.be/HaJZ1xOlF6k?t=40",
+  },
 ];
 
 // Project Card Component
 const ProjectCard = ({ project }: { project: Project }) => {
+  const handleProjectClick = () => {
+    const audio = new Audio("/yeah-boy-meme.mp3");
+    audio.play();
+  };
   return (
     <a
       href={project.link}
@@ -218,7 +223,8 @@ const ProjectCard = ({ project }: { project: Project }) => {
           alt={project.title}
           className="w-full h-full object-cover group-hover:scale-110 aspect-video transition-transform duration-500"
           onError={(e) => {
-            e.currentTarget.src = "https://images.unsplash.com/photo-1492619375914-88005aa9e8fb?w=800&q=80";
+            e.currentTarget.src =
+              "https://images.unsplash.com/photo-1492619375914-88005aa9e8fb?w=800&q=80";
           }}
         />
         <div className="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
@@ -230,31 +236,40 @@ const ProjectCard = ({ project }: { project: Project }) => {
           <h3 className="sm:text-xl font-bold text-foreground group-hover:text-accent transition-colors">
             {project.title}
           </h3>
-          <span className="text-xs sm:text-sm text-muted-foreground">{project.year}</span>
+          <span className="text-xs sm:text-sm text-muted-foreground">
+            {project.year}
+          </span>
         </div>
-        <p className="text-muted-foreground text-sm sm:text-xl sm:mb-2">{project.client}</p>
-        <p className="text-sm text-muted-foreground text-sm sm:text-xl">{project.role}</p>
+        <p className="text-muted-foreground text-sm sm:text-xl sm:mb-2">
+          {project.client}
+        </p>
+        <p className=" text-muted-foreground text-sm sm:text-xl">
+          {project.role}
+        </p>
       </div>
     </a>
   );
 };
 
 // Section Component with See More functionality
-const ProjectSection = ({ 
-  title, 
-  projects, 
+const ProjectSection = ({
+  title,
+  projects,
   icon: Icon,
-  sectionId
-}: { 
-  title: string; 
-  projects: Project[]; 
+  sectionId,
+}: {
+  title: string;
+  projects: Project[];
   icon: any;
   sectionId: string;
 }) => {
   const [showAll, setShowAll] = useState(false);
   const displayedProjects = showAll ? projects : projects.slice(0, 3);
   const hasMore = projects.length > 3;
-
+  // useEffect(() => {
+  //   const audio = new Audio("/yeah-boy-meme.mp3");
+  //   audio.play();
+  // }, [sectionId]);
   useEffect(() => {
     const observer = new IntersectionObserver(
       (entries) => {
@@ -267,13 +282,26 @@ const ProjectSection = ({
       { threshold: 0.1 }
     );
 
-    document.querySelectorAll(`#${sectionId} .fade-in-section`).forEach((el) => {
-      observer.observe(el);
-    });
+    document
+      .querySelectorAll(`#${sectionId} .fade-in-section`)
+      .forEach((el) => {
+        observer.observe(el);
+      });
 
     return () => observer.disconnect();
   }, [showAll, sectionId]);
+  function handleShow() {
+    if (!showAll) {
+      const audio = new Audio("/awwe-sound-effect.mp3");
+      audio.volume = 0.5;
+      audio.play();
+    } else {
+      // const audio = new Audio("/r.mp3");
+      // audio.play();
+    }
 
+    setShowAll(!showAll);
+  }
   return (
     <div className="mb-20" id={sectionId}>
       <div className="flex items-center gap-3 mb-8">
@@ -297,8 +325,8 @@ const ProjectSection = ({
       {hasMore && (
         <div className="flex justify-center mt-8">
           <button
-            onClick={() => setShowAll(!showAll)}
-            className="px-6  text-white hover:text-accent transition-all duration-300  font-medium"
+            onClick={() => handleShow()}
+            className="px-6 text-accent transition-all duration-300  font-medium"
           >
             {showAll ? "Show Less" : "See More"}
           </button>
@@ -311,6 +339,7 @@ const ProjectSection = ({
 const Work = () => {
   return (
     <div className="min-h-screen pt-32 pb-20 px-6 bg-background">
+      <SoundPlayer autoPlay={true} src="/yeah-boy-meme.mp3" volume={0.2} />
       <div className="container mx-auto max-w-7xl">
         {/* Header */}
         <div className="mb-16 text-center animate-fade-in">
@@ -318,36 +347,40 @@ const Work = () => {
             My Work
           </h1>
           <p className="sm:text-xl text-muted-foreground max-w-6xl mx-auto">
-            Diverse media expertise: <span className="text-white">long-form videos</span>, <span className="text-white">short reels</span>, <span className="text-white">podcasts</span>, and <span className="text-white">creative brand content</span>
+            Diverse media expertise:{" "}
+            <span className="text-accent">long-form videos</span>,{" "}
+            <span className="text-accent">short reels</span>,{" "}
+            <span className="text-accent">podcasts</span>, and{" "}
+            <span className="text-accent">creative brand content</span>
           </p>
         </div>
 
         {/* Short Form Videos Section */}
-        <ProjectSection 
-          title="Short-Form Videos" 
-          projects={shortFormVideos} 
+        <ProjectSection
+          title="Short-Form Videos"
+          projects={shortFormVideos}
           icon={Clock}
           sectionId="short-form-section"
         />
 
         {/* Long Form Videos Section */}
-        <ProjectSection 
-          title="Long-Form Videos" 
-          projects={longFormVideos} 
+        <ProjectSection
+          title="Long-Form Videos"
+          projects={longFormVideos}
           icon={Play}
           sectionId="long-form-section"
         />
 
         {/* Podcasts Section */}
-        <ProjectSection 
-          title="Podcasts" 
-          projects={podcasts} 
+        <ProjectSection
+          title="Podcasts"
+          projects={podcasts}
           icon={Mic}
           sectionId="podcasts-section"
         />
       </div>
 
-      <style jsx>{`
+      <style>{`
         .fade-in-section {
           opacity: 0;
           transform: translateY(20px);

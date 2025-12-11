@@ -1,10 +1,18 @@
 import { useState, useEffect } from "react";
-import { Mail, Phone, MapPin, Linkedin, Instagram, Twitter } from "lucide-react";
+import {
+  Mail,
+  Phone,
+  MapPin,
+  Linkedin,
+  Instagram,
+  Twitter,
+} from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { useToast } from "@/hooks/use-toast";
 import { personalInfo } from "@/data/portfolio";
+import SoundPlayer from "@/components/ui/SoundPlayer";
 
 const Contact = () => {
   const { toast } = useToast();
@@ -13,7 +21,10 @@ const Contact = () => {
     email: "",
     message: "",
   });
-
+  // useEffect(() => {
+  //   const audio = new Audio("/wait-a-minute-who-are-you.mp3");
+  //   audio.play();
+  // }, []);
   useEffect(() => {
     const observer = new IntersectionObserver(
       (entries) => {
@@ -34,49 +45,48 @@ const Contact = () => {
   }, []);
 
   const handleSubmit = (e: React.FormEvent) => {
-  e.preventDefault();
+    e.preventDefault();
 
-  // Basic validation
-  if (!formData.name || !formData.email || !formData.message) {
+    // Basic validation
+    if (!formData.name || !formData.email || !formData.message) {
+      toast({
+        title: "Error",
+        description: "Please fill in all fields",
+        variant: "destructive",
+      });
+      return;
+    }
+
+    // Email validation
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    if (!emailRegex.test(formData.email)) {
+      toast({
+        title: "Error",
+        description: "Please enter a valid email address",
+        variant: "destructive",
+      });
+      return;
+    }
+
+    // WhatsApp message content
+    const whatsappMessage = `New Portfolio Enquiry%0A%0AName: ${formData.name}%0AEmail: ${formData.email}%0AMessage: ${formData.message}`;
+
+    // Your WhatsApp number (with country code)
+    const phoneNumber = "919557990153"; // <-- your number
+
+    // WhatsApp URL
+    const whatsappUrl = `https://wa.me/${phoneNumber}?text=${whatsappMessage}`;
+
+    // Open WhatsApp
+    window.open(whatsappUrl, "_blank");
+
     toast({
-      title: "Error",
-      description: "Please fill in all fields",
-      variant: "destructive",
+      title: "Redirecting to WhatsApp...",
+      description: "You can send your message directly from there.",
     });
-    return;
-  }
 
-  // Email validation
-  const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-  if (!emailRegex.test(formData.email)) {
-    toast({
-      title: "Error",
-      description: "Please enter a valid email address",
-      variant: "destructive",
-    });
-    return;
-  }
-
-  // WhatsApp message content
-  const whatsappMessage = `New Portfolio Enquiry%0A%0AName: ${formData.name}%0AEmail: ${formData.email}%0AMessage: ${formData.message}`;
-
-  // Your WhatsApp number (with country code)
-  const phoneNumber = "919557990153"; // <-- your number
-
-  // WhatsApp URL
-  const whatsappUrl = `https://wa.me/${phoneNumber}?text=${whatsappMessage}`;
-
-  // Open WhatsApp
-  window.open(whatsappUrl, "_blank");
-
-  toast({
-    title: "Redirecting to WhatsApp...",
-    description: "You can send your message directly from there.",
-  });
-
-  setFormData({ name: "", email: "", message: "" });
-};
-
+    setFormData({ name: "", email: "", message: "" });
+  };
 
   const handleChange = (
     e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
@@ -86,6 +96,11 @@ const Contact = () => {
 
   return (
     <div className="min-h-screen pt-32 pb-20 px-6">
+      <SoundPlayer
+        autoPlay={true}
+        src="/wait-a-minute-who-are-you.mp3"
+        volume={0.2}
+      />
       <div className="container mx-auto max-w-5xl">
         {/* Header */}
         <div className="text-center mb-16 animate-fade-in">
@@ -93,7 +108,8 @@ const Contact = () => {
             Let's Connect
           </h1>
           <p className="text-sm sm:text-xl text-muted-foreground max-w-2xl mx-auto">
-            Have a project in mind or just want to chat? I'd love to hear from you.
+            Have a project in mind or just want to chat? I'd love to hear from
+            you.
           </p>
         </div>
 
@@ -105,35 +121,39 @@ const Contact = () => {
                 Get in Touch
               </h2>
               <div className="space-y-6">
-                <a
-                  href={`mailto:${personalInfo.email}`}
-                  className="flex items-center gap-4 group"
-                >
-                  <div className="w-12 h-12 bg-accent/10 text-accent rounded-full flex items-center justify-center group-hover:bg-accent group-hover:text-white transition-all">
-                    <Mail size={20} />
-                  </div>
-                  <div>
-                    <p className="text-sm text-muted-foreground">Email</p>
-                    <p className="text-foreground group-hover:text-accent transition-colors">
-                      {personalInfo.email}
-                    </p>
-                  </div>
-                </a>
+                <span className="w-fit">
+                  <a
+                    href={`mailto:${personalInfo.email}`}
+                    className="flex items-center w-fit gap-4 group"
+                  >
+                    <div className="w-12 h-12 bg-accent/10 text-accent rounded-full flex items-center justify-center group-hover:bg-accent group-hover:text-white transition-all">
+                      <Mail size={20} />
+                    </div>
+                    <div>
+                      <p className="text-sm text-muted-foreground">Email</p>
+                      <p className="text-foreground group-hover:text-accent transition-colors">
+                        {personalInfo.email}
+                      </p>
+                    </div>
+                  </a>
+                </span>
 
-                <a
-                  href={`tel:${personalInfo.phone}`}
-                  className="flex items-center gap-4 group"
-                >
-                  <div className="w-12 h-12 bg-accent/10 text-accent rounded-full flex items-center justify-center group-hover:bg-accent group-hover:text-white transition-all">
-                    <Phone size={20} />
-                  </div>
-                  <div>
-                    <p className="text-sm text-muted-foreground">Phone</p>
-                    <p className="text-foreground group-hover:text-accent transition-colors">
-                      {personalInfo.phone}
-                    </p>
-                  </div>
-                </a>
+                <span className="w-fit">
+                  <a
+                    href={`tel:${personalInfo.phone}`}
+                    className="flex items-center w-fit gap-4 group"
+                  >
+                    <div className="w-12 h-12 bg-accent/10 text-accent rounded-full flex items-center justify-center group-hover:bg-accent group-hover:text-white transition-all">
+                      <Phone size={20} />
+                    </div>
+                    <div>
+                      <p className="text-sm text-muted-foreground">Phone</p>
+                      <p className="text-foreground group-hover:text-accent transition-colors">
+                        {personalInfo.phone}
+                      </p>
+                    </div>
+                  </a>
+                </span>
 
                 <div className="flex items-center gap-4">
                   <div className="w-12 h-12 bg-accent/10 text-accent rounded-full flex items-center justify-center">
@@ -191,7 +211,10 @@ const Contact = () => {
           <div className="fade-in-section">
             <form onSubmit={handleSubmit} className="space-y-6">
               <div>
-                <label htmlFor="name" className="block text-sm font-medium text-foreground mb-2">
+                <label
+                  htmlFor="name"
+                  className="block text-sm font-medium text-foreground mb-2"
+                >
                   Name
                 </label>
                 <Input
@@ -207,7 +230,10 @@ const Contact = () => {
               </div>
 
               <div>
-                <label htmlFor="email" className="block text-sm font-medium text-foreground mb-2">
+                <label
+                  htmlFor="email"
+                  className="block text-sm font-medium text-foreground mb-2"
+                >
                   Email
                 </label>
                 <Input
@@ -223,7 +249,10 @@ const Contact = () => {
               </div>
 
               <div>
-                <label htmlFor="message" className="block text-sm font-medium text-foreground mb-2">
+                <label
+                  htmlFor="message"
+                  className="block text-sm font-medium text-foreground mb-2"
+                >
                   Message
                 </label>
                 <Textarea

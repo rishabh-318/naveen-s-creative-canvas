@@ -2,6 +2,7 @@ import { useEffect } from "react";
 import { personalInfo, skills, tools } from "@/data/portfolio";
 import { Download, LocateIcon, Mail, Phone } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import SoundPlayer from "@/components/ui/SoundPlayer";
 
 const About = () => {
   useEffect(() => {
@@ -25,6 +26,7 @@ const About = () => {
 
   return (
     <div className="min-h-screen pt-32 pb-20 px-6 ">
+      <SoundPlayer volume={0.3} src="/roman-intro.mp3" />
       <div className="container mx-auto max-w-5xl">
         {/* Header */}
         <div className="text-center mb-12 sm:mb-16 animate-fade-in">
@@ -41,18 +43,21 @@ const About = () => {
           <div className="grid grid-cols-1 md:grid-cols-3 gap-12">
             <div className="md:col-span-2 space-y-6">
               {personalInfo.bio.map((paragraph, index) => (
-                <p key={index} className="text-sm sm:text-xl text-muted-foreground leading-relaxed">
+                <p
+                  key={index}
+                  className="text-sm sm:text-xl text-muted-foreground leading-relaxed"
+                >
                   {paragraph}
                 </p>
               ))}
               <div className="pt-6">
                 <Button
                   onClick={() => {
-    const link = document.createElement("a");
-    link.href = "/Naveen portfolio.pdf"; // file inside public folder
-    link.download = "Naveen-Sundriyal-Resume.pdf"; // name for download
-    link.click();
-  }}
+                    const link = document.createElement("a");
+                    link.href = "/Naveen portfolio.pdf"; // file inside public folder
+                    link.download = "Naveen-Sundriyal-Resume.pdf"; // name for download
+                    link.click();
+                  }}
                   size="lg"
                   className="bg-accent hover:bg-accent/90 text-white text-sm sm:text-xl flex items-center gap-2"
                 >
@@ -63,82 +68,82 @@ const About = () => {
             </div>
 
             <div className="w-full space-y-8">
+              <div className="grid gap-8 ">
+                {/* Email */}
+                <div className="flex items-start gap-4">
+                  <div className="p-2 rounded-lg bg-white/5 border border-white/30">
+                    <Mail className="text-accent w-5 h-5" />
+                  </div>
 
-  <div className="grid gap-8 ">
+                  <div className="space-y-1">
+                    <h3 className="text-xs font-semibold uppercase  tracking-wider">
+                      Email
+                    </h3>
+                    <a
+                      href={`mailto:${personalInfo.email}`}
+                      className="text-base font-medium hover:text-accent transition-colors"
+                    >
+                      {personalInfo.email}
+                    </a>
+                  </div>
+                </div>
 
-    {/* Email */}
-    <div className="flex items-start gap-4">
-      <div className="p-2 rounded-lg bg-white/5 border border-white/30">
-        <Mail className="text-accent w-5 h-5" />
-      </div>
+                {/* Phone */}
+                <div className="flex items-start gap-4">
+                  <div className="p-2 rounded-lg bg-white/5 border border-white/30">
+                    <Phone className="text-accent w-5 h-5" />
+                  </div>
 
-      <div className="space-y-1">
-        <h3 className="text-xs font-semibold uppercase text-white/50 tracking-wider">
-          Email
-        </h3>
-        <a
-          href={`mailto:${personalInfo.email}`}
-          className="text-base font-medium text-white/90 hover:text-accent transition-colors"
-        >
-          {personalInfo.email}
-        </a>
-      </div>
-    </div>
+                  <div className="space-y-1">
+                    <h3 className="text-xs font-semibold uppercase  tracking-wider">
+                      Phone
+                    </h3>
+                    <a
+                      href={`tel:${personalInfo.phone}`}
+                      className="text-base font-medium hover:text-accent transition-colors"
+                    >
+                      {personalInfo.phone}
+                    </a>
+                  </div>
+                </div>
+              </div>
 
-    {/* Phone */}
-    <div className="flex items-start gap-4">
-      <div className="p-2 rounded-lg bg-white/5 border border-white/30">
-        <Phone className="text-accent w-5 h-5" />
-      </div>
+              <div className="border-t border-white/30"></div>
 
-      <div className="space-y-1">
-        <h3 className="text-xs font-semibold uppercase text-white/50 tracking-wider">
-          Phone
-        </h3>
-        <a
-          href={`tel:${personalInfo.phone}`}
-          className="text-base font-medium text-white/90 hover:text-accent transition-colors"
-        >
-          {personalInfo.phone}
-        </a>
-      </div>
-    </div>
+              {/* Location: full width */}
+              <div className="flex items-start gap-4">
+                <div className="p-2 rounded-lg bg-white/5 border border-white/30">
+                  <LocateIcon className="text-accent w-5 h-5" />
+                </div>
 
-  </div>
-
-  <div className="border-t border-white/30"></div>
-
-  {/* Location: full width */}
-  <div className="flex items-start gap-4">
-    <div className="p-2 rounded-lg bg-white/5 border border-white/30">
-      <LocateIcon className="text-accent w-5 h-5" />
-    </div>
-
-    <div className="space-y-1">
-      <h3 className="text-xs font-semibold uppercase text-white/50 tracking-wider">
-        Location
-      </h3>
-      <p className="text-base font-medium text-white/90">
-        {personalInfo.location}
-      </p>
-    </div>
-  </div>
-
-</div>
-
-
+                <div className="space-y-1">
+                  <h3 className="text-xs font-semibold uppercase  tracking-wider">
+                    Location
+                  </h3>
+                  <p className="text-base font-medium ">
+                    {personalInfo.location}
+                  </p>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
 
         {/* Skills Section */}
         <div className="mb-20 fade-in-section">
-          <h2 className="text-2xl sm:text-3xl font-bold text-foreground mb-8">Skills & Expertise</h2>
+          <h2 className="text-2xl sm:text-3xl font-bold text-foreground mb-8">
+            Skills & Expertise
+          </h2>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
             {skills.map((skill) => (
               <div key={skill.name} className="space-y-2">
                 <div className="flex justify-between items-center">
-                  <span className="text-foreground text-sm sm:text-lg font-medium">{skill.name}</span>
-                  <span className="text-muted-foreground text-xs sm:text-sm">{skill.level}%</span>
+                  <span className="text-foreground text-sm sm:text-lg font-medium">
+                    {skill.name}
+                  </span>
+                  <span className="text-muted-foreground text-xs sm:text-sm">
+                    {skill.level}%
+                  </span>
                 </div>
                 <div className="h-2 bg-secondary rounded-full overflow-hidden">
                   <div
@@ -153,14 +158,18 @@ const About = () => {
 
         {/* Tools Section */}
         <div className="fade-in-section">
-          <h2 className="text-2xl sm:text-3xl font-bold text-foreground mb-8">Tools & Software</h2>
+          <h2 className="text-2xl sm:text-3xl font-bold text-foreground mb-8">
+            Tools & Software
+          </h2>
           <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
             {tools.map((tool) => (
               <div
                 key={tool}
                 className="p-4 bg-card border border-border rounded-lg text-center hover-lift"
               >
-                <p className="font-medium text-foreground text-sm sm:text-lg">{tool}</p>
+                <p className="font-medium text-foreground text-sm sm:text-lg">
+                  {tool}
+                </p>
               </div>
             ))}
           </div>
@@ -172,7 +181,8 @@ const About = () => {
             Interested in Working Together?
           </h2>
           <p className="text-sm sm:text-lg text-muted-foreground  mb-8">
-            I'm always open to discussing new projects and creative opportunities.
+            I'm always open to discussing new projects and creative
+            opportunities.
           </p>
           <Button
             asChild
