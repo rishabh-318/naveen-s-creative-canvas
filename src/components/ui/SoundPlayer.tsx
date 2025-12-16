@@ -1,79 +1,43 @@
-import { useEffect, useRef, useState } from "react";
+import { useEffect, useRef } from "react";
+import { Pause, Play } from "lucide-react";
+import { Button } from "@/components/ui/button";
+import { useSound } from "@/context/SoundContext";
 
-export default function SoundPlayer({
-  src = "/intro-pirates.mp3",
-  autoPlay = true,
-  volume = 0.2,
-}) {
-  const audioRef = useRef(null);
-  const [isPlaying, setIsPlaying] = useState(autoPlay);
+type Props = {
+  src: string;
+  volume?: number;
+};
+
+const SoundPlayer = ({ src, volume = 0.05 }: Props) => {
+  const audioRef = useRef<HTMLAudioElement>(null);
+  const { enabled, enableSound, disableSound } = useSound();
 
   useEffect(() => {
-    const audio = new Audio(src);
-    audio.volume = volume;
-    audioRef.current = audio;
+    if (!audioRef.current) return;
 
-    if (autoPlay) audio.play();
+    audioRef.current.volume = volume;
 
-    return () => {
-      audio.pause();
-      audio.currentTime = 0;
-    };
-  }, [src, autoPlay, volume]);
-
-  // Play / Pause Handler
-  const togglePlay = () => {
-    const audio = audioRef.current;
-    if (!audio) return;
-
-    if (isPlaying) {
-      audio.pause();
-      setIsPlaying(false);
+    if (enabled) {
+      audioRef.current.play().catch(() => {});
     } else {
-      audio.play();
-      setIsPlaying(true);
+      audioRef.current.pause();
     }
-  };
+  }, [enabled, volume]);
 
   return (
-    <div
-      style={{
-        height: "screen",
-        position: "fixed",
+    <>
+      <audio ref={audioRef} loop src={src} />
 
-        right: "20px",
-        zIndex: 9999,
-        background: "#ffffff",
-
-        padding: "10px 10px",
-        display: "flex",
-        alignItems: "center",
-        gap: "8px",
-        boxShadow: "0 4px 12px rgba(0,0,0,0.15)",
-      }}
-      className="bottom-5 rounded-full"
-    >
-      <button
-        onClick={togglePlay}
-        style={{
-          border: "none",
-          background: "black",
-          color: "white",
-          borderRadius: "50%",
-          width: "45px",
-          height: "45px",
-          cursor: "pointer",
-          fontSize: "18px",
-        }}
+      <Button
+        variant="ghost"
+        size="icon"
+        onClick={enabled ? disableSound : enableSound}
+        className="fixed bottom-6 right-6 z-40 bg-background/80 backdrop-blur border-2"
       >
-        {isPlaying ? "⏸" : "▶️"}
-      </button>
-      <span
-        style={{ fontSize: "14px", fontWeight: 500 }}
-        className="sm:block hidden"
-      >
-        {isPlaying ? "Playing…" : "Paused"}
-      </span>
-    </div>
+        {enabled ? <Pause /> : <Play />}
+      </Button>
+    </>
   );
-}
+};
+
+export default SoundPlayer;

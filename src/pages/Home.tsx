@@ -33,7 +33,7 @@ const Home = () => {
 
   return (
     <>
-      <SoundPlayer />
+      <SoundPlayer src="/intro-pirates.mp3" volume={0.05} />
 
       <div className="min-h-screen">
         {/* Hero Section */}

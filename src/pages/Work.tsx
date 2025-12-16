@@ -339,7 +339,7 @@ const ProjectSection = ({
 const Work = () => {
   return (
     <div className="min-h-screen pt-32 pb-20 px-6 bg-background">
-      <SoundPlayer autoPlay={true} src="/yeah-boy-meme.mp3" volume={0.2} />
+      <SoundPlayer src="/yeah-boy-meme.mp3" />
       <div className="container mx-auto max-w-7xl">
         {/* Header */}
         <div className="mb-16 text-center animate-fade-in">

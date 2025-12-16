@@ -26,7 +26,7 @@ const About = () => {
 
   return (
     <div className="min-h-screen pt-32 pb-20 px-6 ">
-      <SoundPlayer volume={0.3} src="/roman-intro.mp3" />
+      <SoundPlayer src="/roman-intro.mp3" />
       <div className="container mx-auto max-w-5xl">
         {/* Header */}
         <div className="text-center mb-12 sm:mb-16 animate-fade-in">
