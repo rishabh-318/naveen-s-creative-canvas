@@ -96,7 +96,7 @@ const Contact = () => {
 
   return (
     <div className="min-h-screen pt-32 pb-20 px-6">
-      <SoundPlayer src="/wait-a-minute-who-are-you.mp3" />
+      <SoundPlayer src="/wait-a-minute-who-are-you.mp3" loop={false} />
       <div className="container mx-auto max-w-5xl">
         {/* Header */}
         <div className="text-center mb-16 animate-fade-in">

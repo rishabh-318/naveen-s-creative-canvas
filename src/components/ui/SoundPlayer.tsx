@@ -6,9 +6,10 @@ import { useSound } from "@/context/SoundContext";
 type Props = {
   src: string;
   volume?: number;
+  loop?: boolean;
 };
 
-const SoundPlayer = ({ src, volume = 0.05 }: Props) => {
+const SoundPlayer = ({ src, volume = 0.05, loop=false }: Props) => {
   const audioRef = useRef<HTMLAudioElement>(null);
   const { enabled, enableSound, disableSound } = useSound();
 
@@ -26,7 +27,7 @@ const SoundPlayer = ({ src, volume = 0.05 }: Props) => {
 
   return (
     <>
-      <audio ref={audioRef} loop src={src} />
+      <audio ref={audioRef} loop={loop} src={src} />
 
       <Button
         variant="ghost"

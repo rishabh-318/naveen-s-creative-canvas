@@ -27,7 +27,7 @@ export const SoundProvider = ({ children }: { children: React.ReactNode }) => {
 
   const disableSound = () => {
     localStorage.setItem("sound-enabled", "false");
-    setEnabled(false);
+    setEnabled(e => !e);
   };
 
   if (!initialized) return null;
