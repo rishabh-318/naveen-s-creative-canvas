@@ -293,7 +293,7 @@ const ProjectSection = ({
   function handleShow() {
     if (!showAll) {
       const audio = new Audio("/awwe-sound-effect.mp3");
-      audio.volume = 0.5;
+      audio.volume = 0.1;
       audio.play();
     } else {
       // const audio = new Audio("/r.mp3");
